@@ -134,7 +134,6 @@ img {
     main {
         padding: 10px;
         margin-top: 30px;
-
     }
 
     section {
@@ -143,7 +142,6 @@ img {
     }
 
     section h1 {
-        border: 1px dashed black;
         width: 205px;
     }
 
@@ -158,5 +156,4 @@ img {
     img {
         width: 230px;
     }
-
 }
