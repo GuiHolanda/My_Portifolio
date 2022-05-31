@@ -15,7 +15,7 @@ header {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 40px 10px 0px 20px;  
+    padding: 25px 20px 0px 20px;  
 }
 
 header h1 {
@@ -36,38 +36,127 @@ header a:hover {
     border-radius: 5px;
 }
 
-section {
-    border: 1px solid black;
-    max-width: 950px;
+main {
+    display: flex;
+    max-width: 800px;
     margin: auto;
+    margin-top: 70px;
+    position: relative;
+    padding: 15px 20px;  
 }
 
 section h1 {
     color: var(--grey);
-    font-size: 5em;
-    max-width: 650px;
-    margin-top: 100px;
-    margin-left: 50px;
+    font-size: 3em;
+    max-width: 450px;
+    margin-bottom: 30px;
 }
 
 section h3 {
     color: var(--grey);
     font-weight: normal;
-    font-size: 2em;
-    max-width: 550px;
-    margin: 30px 0px 30px 50px;
+    font-size: 1.2em;
+    width: 350px;
+    margin-bottom: 20px;
 }
 
-section a {
-    display: block;
-    max-width: 150px;
+section p {
+    width: 150px;
     text-align: center;
     background-color: var(--orange);
-    color: white;
-    text-decoration: none;
     padding: 10px;
-    margin-left: 50px;
     border-radius: 7.5px;
-
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.322);
 }
 
+section a  {
+    color: white;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 500px;
+    position: absolute;
+    z-index: -1;
+    left: 270px;
+    top: 30px;
+}
+
+@media (max-width: 770px) {
+
+    main {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    section {
+        text-align: center; 
+    }
+
+    section h1 {
+        width: 450px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    section h3 {
+        width: 350px;
+        margin: auto;
+        margin-bottom: 30px;
+        text-align: center;  
+    }
+
+    section p {
+        margin: auto;
+        width: 260px;
+        font-weight: 600;
+        font-size: 1.2em;
+    }
+
+    img {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: auto;
+        width: 400px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 510px) {
+
+    body {
+        font-size: 0.6em;
+    }
+
+    main {
+        padding: 10px;
+        margin-top: 30px;
+
+    }
+
+    section {
+        width: 250px;
+        margin: auto;
+    }
+
+    section h1 {
+        border: 1px dashed black;
+        width: 205px;
+    }
+
+    section h3 {
+        width: 165px;
+    }
+
+    section p {
+        width: 145px;
+    }
+
+    img {
+        width: 230px;
+    }
+
+}
