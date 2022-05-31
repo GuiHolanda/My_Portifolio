@@ -22,6 +22,10 @@ header h1 {
     color: var(--orange);
 }
 
+#btn {
+    display: none;
+}
+
 header a {
     text-decoration: none;
     color: var(--grey);
@@ -129,6 +133,14 @@ img {
 
     body {
         font-size: 0.6em;
+    }
+
+    #btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
     }
 
     main {
