@@ -31,9 +31,6 @@ header {
     color: var(--orange);
     font-size: 1.5em;
     font-weight: bold;
-}
-
-#logo {
     padding: 0.3em;
 }
 
@@ -59,7 +56,6 @@ header {
     color: white;
     border-radius: 0.4em;
 }
-
 
 main {
     display: flex;
@@ -170,16 +166,19 @@ img {
         z-index: 100;
         visibility: hidden;
         overflow-y: hidden ;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
 
     #menu a {
         color: #D2872C;
         border-bottom: 1px solid #766f6810 ;
+        font-size: 1.3em;
     }
 
     #nav.active #menu {
         display:block;
-        height: 85px;
+        height: 100px;
         visibility: visible;
     }
 
@@ -216,11 +215,11 @@ img {
     }
 
     #nav.active #hamburguer::before {
-        transform: rotate(135deg);
+        transform: rotate(45deg);
     }
 
     #nav.active #hamburguer::after {
-        transform: rotate(-135deg);
+        transform: rotate(-45deg);
         top: -7px;
     }
 
