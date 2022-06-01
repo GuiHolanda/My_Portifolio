@@ -7,38 +7,59 @@
 
 * {
     margin: 0px;
+    padding: 0px;
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
 }
 
 header {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 25px 20px 0px 20px;  
+    padding: 20px;
 }
 
-header h1 {
+#logo {
     color: var(--orange);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#logo {
+    padding: 0.3em;
 }
 
 #btn {
     display: none;
 }
 
-header a {
-    text-decoration: none;
-    color: var(--grey);
-    padding: 10px;
-    font-weight: bold;
-    transition-duration: 0.3s;
+#menu {
+    display: flex;
+    list-style: none;
+    gap: 0.5em;
 }
 
-header a:hover {
+#menu a {
+    display: block;
+    color: var(--grey);
+    font-weight: bold;
+    padding: 0.5em;
+}
+
+#menu a:hover {
     background-color: var(--orange);
     color: white;
-    border-radius: 5px;
+    border-radius: 0.4em;
 }
+
 
 main {
     display: flex;
@@ -134,13 +155,73 @@ img {
     body {
         font-size: 0.6em;
     }
-
-    #btn {
+    
+    #menu {
         display: block;
+        position: absolute;
+        font-size: 1em;
+        left: 0px;
+        margin-left: 20px;
+        margin-right: 20px;
+        width: calc(100vw - 40px);
+        transition: .3s;
+        height: 0;
+        background-image: linear-gradient(to top, #d2872c7e ,rgba(255, 255, 255, 0.411));
+        z-index: 100;
+        visibility: hidden;
+        overflow-y: hidden ;
     }
 
-    nav {
-        display: none;
+    #menu a {
+        color: #D2872C;
+        border-bottom: 1px solid #766f6810 ;
+    }
+
+    #nav.active #menu {
+        display:block;
+        height: 85px;
+        visibility: visible;
+    }
+
+    #btn {
+        display: flex;
+        padding: .1rem 1rem;
+        background: none;
+        border: none;
+        font-weight: bold;
+        color: var(--grey);
+        cursor: pointer;
+        gap: .5rem;
+    }
+
+    #hamburguer {
+        display: block;
+        border-top: 1.5px solid;
+        width: 20px;
+    }
+
+    #hamburguer::after, #hamburguer::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 1.5px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .6s;
+        position: relative;
+    }
+
+    #nav.active #hamburguer{
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburguer::before {
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
     }
 
     main {

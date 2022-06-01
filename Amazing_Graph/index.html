@@ -8,13 +8,17 @@
     <title>Amazing graphics</title>
 </head>
 <body>
-    <header>
-        <h1>DevChallenge</h1>
-        <button id="btn" onclick="toggleMenu()">Menu</button>
+    <header id="header">
+        <a id="logo" href="">DevChallenge</a>
         <nav id="nav">
-          <a href="#"> Home</a>
-          <a href="#"> Features</a>
-          <a href="#"> Contact</a>
+          <button id="btn" onclick="toggleMenu()">Menu
+            <span id="hamburguer"></span>
+          </button>
+          <ul id="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
       </nav>
     </header>
     <main>
