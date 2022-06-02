@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
 :root {
-    --main: #262626 ;
-    --second: #474073;
+    --main: #121e27 ;
+    --second: #ff715b;
 }
 
 * {
     margin: 0px;
     padding: 0px;
     font-family: 'Abel', sans-serif;  
+    box-sizing: border-box;
 }
 
 header {
@@ -34,6 +35,7 @@ header {
     text-decoration: none;
     color: white; 
     padding: 10px;
+    height: 40px;
 }
 
 #uline {
@@ -43,29 +45,57 @@ header {
     width: inherit;
     background-color: var(--second);
     transition: .3s;
+    border: 0px solid var(--second);
+
 }
 
 #menu a:hover #uline {
-    border-bottom: 2px solid ;
+    border-bottom: 2px solid var(--second) ;
     height: 6px;
     background-color: var(--main);
-    border-top: 2px solid ;
+    border-top: 2px solid var(--second);
 }
 
-/*
-#uline::after {
-
-    display: block;
-    height: 1.5px;
-    background: currentColor;
-    margin-bottom: 5px;
+#intro{
+    padding: 80px 150px 0px ;
+    background-color: var(--main);
+    color: white;
+    height: calc(100vh - 100px);
 }
 
-#menu a:hover #uline::after {
-    content: "";
-
+#intro h1 {
+    font-size: 64px;
+    width: 760px;
+    padding-bottom: 15px;
 }
-*/
+
+#intro h3 {   
+    margin-top: 20px; 
+    font-size: 20px;
+    width: 380px;
+    font-weight: normal;
+}
+
+#intro svg {
+    font-size: 2.5em;
+    color: #ff715b;
+    margin-right: 10px;
+    transition: .6s;
+}
+
+#intro svg:hover {
+    color: white;
+}
+
+#bio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: blue;
+}
+#bio div {
+    grid-column: 1/3;
+}
 
 
 
