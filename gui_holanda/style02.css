@@ -1,0 +1,62 @@
+* {
+    box-sizing: inherit;
+}
+
+#container {
+    position: relative;
+    padding-top: 3rem;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    margin: 0rem;
+}
+
+#container > :nth-child(2) {
+    min-height: 75hv;
+}
+
+#container a {
+  color: rgb(255, 113, 91);
+  font-weight: bold;
+  transition: filter 0.4s ease-in-out 0s;
+  text-decoration: none;  
+}
+#Navbar_Container {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: rgb(18, 30, 39);
+    z-index: 999;
+    text-align: center;
+    width: 100%;
+    padding: 1rem 3rem;
+}
+
+#Navbar_Container #menu {
+    display: flex;
+    
+}
+
+
+#bio {
+    max-width: 1100px;
+    margin: auto;
+    background: white;
+    color: rgb(18, 30, 39);
+    padding: 1.2rem 2rem;
+}
+
+#bioContainer {
+    grid-template-areas: 
+    "header"
+    "image"
+    "text";
+    display:grid;
+}
+
+#bioContainer h1 {
+    grid-area: header / header /header / header;
+}
+
+#bioText {
+    grid-area: text / text / text / text;
+}
