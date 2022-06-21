@@ -69,15 +69,15 @@ header {
 }
 
 #intro h1 {
-    font-size: 64px;
-    width: 760px;
+    font-size: 6vw;
+    width: 70vw;
     padding-bottom: 15px;
 }
 
 #intro h3 {   
     margin-top: 20px; 
-    font-size: 20px;
-    width: 380px;
+    font-size: calc(2vw + 0.3rem);
+    width: 50vw;
     font-weight: normal;
 }
 
@@ -256,13 +256,12 @@ header {
 @media (max-width: 1000px) {
     
     #intro h1 {
-        font-size: 1.8rem;
-        width: 500px;
-        padding-bottom: 15px;
+
+
     }
     
     #intro h3 {   
-        font-size: 1.3rem;
+
     }
     
     #intro svg {
@@ -286,13 +285,18 @@ header {
 
     header {
         flex-direction: row;
-        align-content: center;
+        height: 10vh;
     }
 
     #logo {
         margin: auto;
         font-weight: bold;
         font-size: 0.7rem;
+    }
+
+    #nav {
+        display: flex;
+        align-items: center;
     }
 
     #menu {
@@ -335,23 +339,23 @@ header {
         padding-top: 15vh;
         background-color: var(--main);
         color: white;
-        height: calc(100vh - 50px);
+        height: 90vh;
     }
 
     #intro h1 {
-        font-size: 1rem;
-        width: 150px;
+
     }
 
     #intro h3 {
-        font-size: 1rem;
-        width: 200px;
+
+
     }
 
     .circles{
         position: absolute;
         top: 10vh;
         left: 40vw;
+        width: 60vw;
         height: calc(100% - 10vh);
     }
 }
