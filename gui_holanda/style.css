@@ -90,9 +90,7 @@ header {
 #intro svg {
     font-size: 2.5em;
     color: #ff715b;
-    margin-right: 10px;
-    cursor: pointer;
-    
+    margin-right: 10px; 
 }
 
 #intro svg:hover {
