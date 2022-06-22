@@ -1,18 +1,13 @@
-const result = {
-  success: ["max-length", "no-amd", "prefer-arrow-functions"],
-  failure: ["no-var", "var-on-top", "linebreak"],
-  skipped: ["no-extra-semi", "no-dup-keys"]
-};
-function makeList(arr) {
+function filteredArray(arr, elem) {
+  let newArr = [];
   // Only change code below this line
-  failureItems = [];
-  for(let x in arr) {
-    failureItems.push(`<li class="text-warning">${arr[x]}</li>`);
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].includes(elem) === false) {
+      newArr.push(arr[i]);
+    }
   }
   // Only change code above this line
-
-  return failureItems;
+  return newArr;
 }
 
-const failuresList = makeList(result.failure);
-console.log(failuresList)
+console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3));

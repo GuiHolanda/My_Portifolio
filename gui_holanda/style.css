@@ -43,6 +43,7 @@ header {
 #menu a {
     display: block;
     text-decoration: none;
+    font-weight: bold;
     color: white; 
     padding: 10px;
     height: 40px;
@@ -66,36 +67,38 @@ header {
 }
 
 #intro{
-    padding-top: 15vh;
+    padding: 20vh 0px 0px 60px;
     background-color: var(--main);
     color: white;
     height: 85vh;
 }
 
 #intro h1 {
-    font-size: 6vw;
-    width: 70vw;
-    padding-bottom: 15px;
+    font-size: 4rem;
+    max-width: 850px;
+    padding-bottom: 20px;
 }
 
 #intro h3 {   
     margin-top: 20px; 
-    font-size: calc(2vw + 0.3rem);
-    width: 50vw;
+    font-size: 1.2rem;
+    max-width: 400px;
     font-weight: normal;
+    line-height: 2rem;
 }
 
 #intro svg {
     font-size: 2.5em;
     color: #ff715b;
     margin-right: 10px;
-    transition: .6s;
+    cursor: pointer;
+    
 }
 
 #intro svg:hover {
     color: white;
+    transition: 1s;
 }
-
 
 #bioBox {
     padding: 10vh 15vw 0px 15vw;
@@ -254,7 +257,6 @@ header {
         opacity: 0;
         border-radius: 50%;
     }
-
 }
 
 @media (max-width: 1000px) {
