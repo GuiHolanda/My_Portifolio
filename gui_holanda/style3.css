@@ -13,60 +13,85 @@
     box-sizing: border-box;
 }
 
+
 #paginicial {
     background-color: var(--main);
 }
 
-header {
+
+.container{
+    margin: 0 auto; /*Center the container horizontally in the middle of the page.*/
+    padding: 12px;
+}
+.navbar{
     display: flex;
-    height: 8vh;
-    text-align: center;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--main);
+    flex-wrap: wrap; /*Allows the children inside a flex container to wrap down onto the next line if there is not enough space.*/
+    align-items: center; /*Centers the children of a flex container vertically.*/
+    justify-content: space-between; /*Adds space between each child of a flex container.*/
+    padding-block: 15px; /*Padding top and bottom*/
+}
+.navbar a{
+    text-decoration: none;
+    color: white; /*Inherits the same color as the parent element or grandparent (the body) unless you set the color to the navbar.*/
+    font-weight: bold;
+}
+
+label i {
     color: white;
-    padding: 5px 48px;
 }
 
-#logo {
-    margin: auto;
+.navbar label{
+    display: inline-flex; /*Makes it an inline flex container for the icon. Used for centering the icon inside this box.*/
+    align-items: center;
+    cursor: pointer;
 }
 
-#menu {
+#uline {
+    display: block;
+    margin-top: 5px;
+    height: 5px;
+    width: inherit;
+    background-color: var(--second);
+    transition: .3s;
+    border: 0px solid var(--second);
+}
+
+.list a:hover #uline {
+    border-bottom: 2px solid var(--second) ;
+    height: 6px;
+    background-color: var(--main);
+    border-top: 2px solid var(--second);
+}
+
+.logo{
+    margin-right: 50px;
+}
+
+.list{
+    list-style: none;
+    display: flex;
+    gap: 25px; /*Applies right and bottom spacing between children inside a flex or grid container.*/
+}
+
+.menu, #toggler{
     display: none;
 }
 
-#btn {
-    display: block;
-}
-
-#btn {
+#toggler:checked ~ .menu{
     display: flex;
-    padding: .1rem 1rem;
-    background: none;
-    border: none;
-    font-weight: bold;
-    color: var(--grey);
-    cursor: pointer;
-    gap: .5rem;
+    width: 100%;
+    position: absolute;
+
 }
 
-#hamburguer {
-    display: block;
-    border-top: 1.5px solid;
-    width: 20px;
+#toggler:checked ~ .menu .list {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-height: 100%;
 }
 
-#hamburguer::after, #hamburguer::before {
-    content: "";
-    display: block;
-    width: 20px;
-    height: 1.5px;
-    background: currentColor;
-    margin-top: 5px;
-    transition: .6s;
-    position: relative;
-}
+
 
 #intro{
     padding: 20vh 0px 0px 20px;
@@ -98,7 +123,7 @@ header {
 
 .circles{
     position: absolute;
-    top: 8vh;
+    top: 30vh;
     left: 20vw;
     width: calc(100% - 20vw);
     height: calc(100% - 8vh);

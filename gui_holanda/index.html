@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -134,17 +135,18 @@
     </div> -->
     <div id="paginicial">
         <header>
-            <a id="logo">Guilherme Holanda</a>
-            <nav id="nav">
-                <ul id="menu">
-                    <li><a href="/gui_holanda/index.html">about<span id="uline"></span></li></a>
-                    <li><a href="/gui_holanda/index.html">blog<span id="uline"></span></a></li>
-                    <li><a href="/gui_holanda/index.html">projects<span id="uline"></span></a></li>
-                    <li><a href="/gui_holanda/index.html">contact<span id="uline"></span></a></li>
-                </ul>
-                <button id="btn" aria-label="Abrir Menu" aria-expanded="false" aria-controls="menu" aria-haspopup="true">
-                    <span id="hamburguer"></span>
-                  </button>
+            <nav class ="navbar container">
+                <a href="#" class="logo">Guilherme Holanda</a>
+                <input type="checkbox" id="toggler">
+                <label for="toggler"><i class="ri-menu-line"></i></label>
+                <div class="menu">
+                    <ul class="list">
+                        <li><a href="/gui_holanda/index.html">about<span id="uline"></span></li></a>
+                        <li><a href="/gui_holanda/index.html">blog<span id="uline"></span></a></li>
+                        <li><a href="/gui_holanda/index.html">projects<span id="uline"></span></a></li>
+                        <li><a href="/gui_holanda/index.html">contact<span id="uline"></span></a></li>
+                    </ul>
+                </div>
             </nav>
         </header>
         <div id="grid" style="padding: 0 clamp(1rem, 7vw, 200px); background:var(--main)">
