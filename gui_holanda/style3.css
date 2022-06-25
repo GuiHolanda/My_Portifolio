@@ -18,33 +18,34 @@
     background-color: var(--main);
 }
 
+#btn {
+    display: none;
+}
 
-.container{
-    margin: 0 auto; /*Center the container horizontally in the middle of the page.*/
-    padding: 12px;
-}
-.navbar{
+#container {
     display: flex;
-    flex-wrap: wrap; /*Allows the children inside a flex container to wrap down onto the next line if there is not enough space.*/
-    align-items: center; /*Centers the children of a flex container vertically.*/
-    justify-content: space-between; /*Adds space between each child of a flex container.*/
-    padding-block: 15px; /*Padding top and bottom*/
+    flex-direction: column;
+    text-align: center;
+    height: 10vh;
 }
-.navbar a{
+
+.logo {
+    padding-top: 2vh;
+}
+
+#nav {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin-top: 10px;
+}
+
+#container a{
     text-decoration: none;
-    color: white; /*Inherits the same color as the parent element or grandparent (the body) unless you set the color to the navbar.*/
+    color: white;
     font-weight: bold;
 }
 
-label i {
-    color: white;
-}
-
-.navbar label{
-    display: inline-flex; /*Makes it an inline flex container for the icon. Used for centering the icon inside this box.*/
-    align-items: center;
-    cursor: pointer;
-}
 
 #uline {
     display: block;
@@ -56,48 +57,18 @@ label i {
     border: 0px solid var(--second);
 }
 
-.list a:hover #uline {
+#nav a:hover #uline {
     border-bottom: 2px solid var(--second) ;
     height: 6px;
     background-color: var(--main);
     border-top: 2px solid var(--second);
 }
 
-.logo{
-    margin-right: 50px;
-}
-
-.list{
-    list-style: none;
-    display: flex;
-    gap: 25px; /*Applies right and bottom spacing between children inside a flex or grid container.*/
-}
-
-.menu, #toggler{
-    display: none;
-}
-
-#toggler:checked ~ .menu{
-    display: flex;
-    width: 100%;
-    position: absolute;
-
-}
-
-#toggler:checked ~ .menu .list {
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    max-height: 100%;
-}
-
-
-
 #intro{
     padding: 20vh 0px 0px 20px;
     background-color: var(--main);
     color: white;
-    height: 92vh;
+    height: 90vh;
 }
 
 #intro h1 {
@@ -123,10 +94,10 @@ label i {
 
 .circles{
     position: absolute;
-    top: 30vh;
+    top: 13vh;
     left: 20vw;
     width: calc(100% - 20vw);
-    height: calc(100% - 8vh);
+    height: calc(100% - 13vh);
     overflow: hidden;
 }
 
@@ -228,5 +199,46 @@ label i {
         transform: translateY(-1000px) rotate(720deg);
         opacity: 0;
         border-radius: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    #container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px 0 15px;
+        height: 7vh;
+    }
+
+    .logo {
+        padding-top: 0;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #btn {
+        display: block;
+        color: white;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    #btn i {
+        font-size: 20px;
+    }
+
+    #intro {
+        height: 93vh;
+    }
+
+    .circles{
+        position: absolute;
+        top: 7vh;
+        height: calc(100% - 7vh);
+
     }
 }
