@@ -213,8 +213,10 @@
     }
 
     .logo {
-        padding-top: 0;
-        margin: auto;
+        padding: 0;
+        position: absolute;
+        z-index: 2000;
+        width: 95%;
     }
 
     #nav{
@@ -226,7 +228,7 @@
         justify-content: initial;
         position: fixed;
         inset: 0 0 0 0;
-        padding-top: 7vh;
+        padding: 7vh 0 10px 0;
         transform: translateX(150%);
         transition: transform 550ms ease-in-out;
         margin-top: 0;
